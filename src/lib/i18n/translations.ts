@@ -5,10 +5,10 @@ export const translations = {
     },
     hero: {
       badge: "Hôtellerie & Restauration — Maroc",
-      title1: "Fini les No-Shows.",
-      title2: "Recrutez le bon profil,",
+      title1: "Fini les No-Shows,",
+      title2: "Recrutez le bon profil.",
       title3: "plus vite.",
-      subtitle: "Publiez votre offre, recevez des candidats vérifiés et gérez tout votre recrutement H&R sur une seule plateforme. En ligne en 3 minutes.",
+      subtitle: "Publiez votre offre, recevez des candidats vérifiés\net gérez tout votre recrutement H&R sur une seule plateforme.\nEn ligne en 3 minutes.",
       cta: "Publier votre annonce maintenant",
       no_card: "Gratuit pour commencer · Aucune carte bancaire",
       stats: {
@@ -92,7 +92,7 @@ export const translations = {
       title1: "وداعاً لعدم الحضور.",
       title2: "وظّف الكفاءة المناسبة،",
       title3: "بشكل أسرع.",
-      subtitle: "انشر عرضك، واحصل على مرشحين موثوقين، وأدر عملية التوظيف في قطاع الفندقة والمطاعم عبر منصة واحدة. متصل في 3 دقائق.",
+      subtitle: "انشر عرضك، واحصل على مرشحين موثوقين،\nوأدر عملية التوظيف في قطاع الفندقة والمطاعم عبر منصة واحدة.\nمتصل في 3 دقائق.",
       cta: "انشر إعلانك الآن",
       no_card: "مجاني للبدء · لا يتطلب بطاقة ائتمان",
       stats: {
@@ -176,7 +176,7 @@ export const translations = {
       title1: "No more No-Shows.",
       title2: "Hire the right talent,",
       title3: "faster.",
-      subtitle: "Post your job, receive verified candidates, and manage all your H&R recruitment on a single platform. Online in 3 minutes.",
+      subtitle: "Post your job, receive verified candidates,\nand manage all your H&R recruitment on a single platform.\nOnline in 3 minutes.",
       cta: "Post your job now",
       no_card: "Free to start · No credit card required",
       stats: {

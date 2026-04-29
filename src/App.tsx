@@ -16,8 +16,10 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <Hero />
-        <LogosMarquee />
+        <div className="flex flex-col min-h-[calc(100vh-4rem)]">
+          <Hero />
+          <LogosMarquee />
+        </div>
         <Process />
         <Features />
         <VideoSection />

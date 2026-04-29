@@ -17,21 +17,21 @@ export function Stats() {
     <section className="bg-blue-bg border-t border-gray-100 py-16 px-6">
       <div className="max-w-[960px] mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold text-[#082a41] leading-tight tracking-[-0.5px]">{t('stats.title')}</h2>
+          <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-[#082a41] leading-tight">{t('stats.title')}</h2>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 text-center">
           <motion.div initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}}>
              <span className="block text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-[-1px] text-gray-900">457+</span>
-             <span className="block text-xs text-gray-500 mt-1">{t('stats.companies')}</span>
+             <span className="block text-[clamp(16px,2vw,18px)] font-normal text-gray-500 mt-1">{t('stats.companies')}</span>
           </motion.div>
           <motion.div initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:0.1}}>
              <span className="block text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-[-1px] text-blue-main">4 942+</span>
-             <span className="block text-xs text-gray-500 mt-1">{t('stats.offers')}</span>
+             <span className="block text-[clamp(16px,2vw,18px)] font-normal text-gray-500 mt-1">{t('stats.offers')}</span>
           </motion.div>
           <motion.div initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:0.2}}>
              <span className="block text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-[-1px] text-gray-900">100%</span>
-             <span className="block text-xs text-gray-500 mt-1">{t('stats.free')}</span>
+             <span className="block text-[clamp(16px,2vw,18px)] font-normal text-gray-500 mt-1">{t('stats.free')}</span>
           </motion.div>
         </div>
 

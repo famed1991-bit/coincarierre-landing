@@ -5,7 +5,7 @@ import { useLanguage } from "../../lib/i18n/LanguageContext";
 export function Hero() {
   const { t, dir } = useLanguage();
   return (
-    <section id="hero" className="relative overflow-hidden min-h-[640px]">
+    <section id="hero" className="relative overflow-hidden flex-1 flex flex-col min-h-[500px]">
       <img
         alt="Équipe d'hôtellerie et restauration"
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
@@ -14,8 +14,8 @@ export function Hero() {
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-dark/90 via-blue-dark/70 to-blue-dark/30 md:from-blue-dark/85 md:via-blue-mid/55 md:to-blue-main/20"></div>
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-dark/70 via-transparent to-transparent"></div>
       <div className={`absolute -top-32 ${dir === 'rtl' ? '-left-32' : '-right-32'} w-[500px] h-[500px] rounded-full bg-blue-light/10 blur-[100px] pointer-events-none z-10`}></div>
-      <div className="max-w-[1100px] mx-auto px-6 grid md:grid-cols-2 items-center min-h-[640px] relative z-20 gap-0">
-        <div className="py-20 md:pe-12 text-center md:text-start">
+      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-0">
+        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -27,18 +27,25 @@ export function Hero() {
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[clamp(2.0rem,4.0vw,3.5rem)] font-black text-white leading-tight tracking-tight mb-5 drop-shadow-md"
+            className="font-bold text-white leading-tight tracking-tight mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
           >
-            {t('hero.title1')}<br />
-            {t('hero.title2')}<br />
-            <span className="text-lime">{t('hero.title3')}</span>
+            <span className="text-[clamp(20px,4.5vw,48px)] whitespace-nowrap">
+              {t('hero.title1')} {t('hero.title2')}
+            </span>
+            <span className="text-[clamp(24px,5vw,48px)] text-lime whitespace-nowrap mt-1">
+              {t('hero.title3')}
+            </span>
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[clamp(1.2rem,1.8vw,1.5rem)] text-blue-pale mb-8 leading-relaxed font-light max-w-[480px] mx-auto md:mx-0 drop-shadow-sm"
+            className="text-blue-pale mb-8 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
-            {t('hero.subtitle')}
-          </motion.p>
+            {t('hero.subtitle').split('\n').map((line, i) => (
+              <span key={i} className="text-[clamp(12px,3vw,18px)] md:text-[clamp(16px,1.5vw,18px)] whitespace-nowrap leading-relaxed">
+                {line}
+              </span>
+            ))}
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col md:flex-row items-center gap-3 mb-3 justify-center md:justify-start"

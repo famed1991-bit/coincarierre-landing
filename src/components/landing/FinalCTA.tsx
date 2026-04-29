@@ -12,10 +12,10 @@ export function FinalCTA() {
         initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}}
         className="relative z-10 max-w-[640px] mx-auto"
       >
-        <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-black text-white leading-[1.3] tracking-normal mb-3">
-          {t('cta.title1')}<br />{t('cta.title2')}
+        <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-white leading-[1.3] mb-3">
+          {t('cta.title')}<br />{t('cta.title2')}
         </h2>
-        <p className="text-blue-pale/70 text-base mb-8 leading-relaxed font-light">
+        <p className="text-[clamp(16px,2vw,18px)] font-normal text-blue-pale/70 mb-8 leading-relaxed">
           {t('cta.subtitle')}
         </p>
         <a

@@ -27,9 +27,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-[1100px] mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="text-xl font-bold tracking-tight">
-          <span className="text-blue-dark">Coin</span>
-          <span className="text-primary">Carrière</span>
+        <a href="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="CoinCarrière Logo" className="h-8 md:h-10 w-auto object-contain" />
         </a>
         <div className="relative" ref={dropdownRef}>
           <button

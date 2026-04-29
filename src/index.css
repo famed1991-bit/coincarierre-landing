@@ -14,7 +14,7 @@
   
   --color-primary: #0077b6;
   
-  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 @layer base {

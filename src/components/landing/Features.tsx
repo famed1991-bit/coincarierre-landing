@@ -52,8 +52,8 @@ export function Features() {
     <section className="bg-blue-bg py-16 px-6">
       <div className="max-w-[1024px] mx-auto">
         <div className="text-center">
-          <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold text-[#082a41] leading-tight tracking-[-0.5px] mb-3">{t('features.title')}</h2>
-          <p className="text-base text-gray-500 max-w-[480px] mx-auto leading-relaxed font-light">{t('features.subtitle')}</p>
+          <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-[#082a41] leading-tight mb-3">{t('features.title')}</h2>
+          <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 max-w-[480px] mx-auto leading-relaxed">{t('features.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {features.map((f, i) => (
@@ -66,8 +66,8 @@ export function Features() {
                 {f.icon}
               </div>
               <div className="flex-1 mt-2 sm:mt-0">
-                <h3 className="text-[1.15rem] font-bold text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-[0.95rem] text-gray-500 leading-relaxed max-w-sm mx-auto sm:mx-0">{f.desc}</p>
+                <h3 className="text-[clamp(24px,3vw,28px)] font-medium text-gray-900 mb-2">{f.title}</h3>
+                <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 leading-relaxed max-w-sm mx-auto sm:mx-0">{f.desc}</p>
               </div>
             </motion.div>
           ))}
