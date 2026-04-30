@@ -11,6 +11,7 @@ export function Testimonials() {
       name: t('testi.t1.name'),
       role: t('testi.t1.role'),
       initials: "KA",
+      image: "/testimonials/t1.jpg",
       rating: 4.5
     },
     {
@@ -18,6 +19,7 @@ export function Testimonials() {
       name: t('testi.t2.name'),
       role: t('testi.t2.role'),
       initials: "SB",
+      image: "/testimonials/t2.jpg",
       rating: 5
     },
     {
@@ -25,6 +27,7 @@ export function Testimonials() {
       name: t('testi.t3.name'),
       role: t('testi.t3.role'),
       initials: "YM",
+      image: "/testimonials/t3.jpg",
       rating: 4.2
     }
   ];
@@ -64,8 +67,12 @@ export function Testimonials() {
               </p>
               
               <div className="flex items-center gap-4 mt-auto">
-                <div className="w-12 h-12 rounded-full bg-[#b3d4e5] text-[#0077b6] flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  {testi.initials}
+                <div className="w-12 h-12 rounded-full bg-[#b3d4e5] text-[#0077b6] flex items-center justify-center font-bold text-lg flex-shrink-0 overflow-hidden">
+                  {testi.image ? (
+                    <img src={testi.image} alt={testi.name} className="w-full h-full object-cover" />
+                  ) : (
+                    testi.initials
+                  )}
                 </div>
                 <div>
                   <div className="text-base font-bold text-[#002f4a]">{testi.name}</div>

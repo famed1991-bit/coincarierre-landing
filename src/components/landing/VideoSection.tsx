@@ -36,11 +36,11 @@ export function VideoSection() {
         <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-white leading-tight mb-3">{t('video.title')}</h2>
 
         <div className="max-w-[640px] mx-auto mt-10 bg-gradient-to-br from-blue-dark to-blue-main rounded-3xl overflow-hidden aspect-video relative shadow-xl border border-white/10">
-          <video 
+          <video
             ref={videoRef}
             className="w-full h-full object-cover"
-            controls 
-            src="/promo.mp4" 
+            controls
+            src="/promo.mp4"
           >
             Your browser does not support the video tag.
           </video>
