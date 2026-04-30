@@ -11,7 +11,7 @@ export function Testimonials() {
       name: t('testi.t1.name'),
       role: t('testi.t1.role'),
       initials: "KA",
-      image: "/testimonials/t1.jpg",
+      image: "/testimonials/t2.jpg",
       rating: 4.5
     },
     {
@@ -19,7 +19,7 @@ export function Testimonials() {
       name: t('testi.t2.name'),
       role: t('testi.t2.role'),
       initials: "SB",
-      image: "/testimonials/t2.jpg",
+      image: "/testimonials/t1.jpg",
       rating: 5
     },
     {
