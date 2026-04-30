@@ -25,10 +25,10 @@ export const translations = {
       badge: "Simple et efficace",
       title: "Du poste ouvert à l'embauche",
       subtitle: "Un processus clair en 4 étapes pour trouver votre prochain talent H&R.",
-      step1: { title: "Publiez", desc: "Décrivez le poste saisonnier et les compétences recherchées. Votre annonce est en ligne en quelques minutes." },
-      step2: { title: "Recevez", desc: "Les candidats vérifiés postulent directement. Filtrez par compétence, expérience H&R ou localisation." },
-      step3: { title: "Évaluez", desc: "Pipeline visuel, notes, planification d'entretiens — gérez tout depuis votre tableau de bord." },
-      step4: { title: "Embauchez", desc: "Envoyez l'offre au candidat retenu et suivez la réponse en temps réel. Zéro no-show." }
+      step1: { title: "Publiez", desc: "Détaillez la mission temporaire et les aptitudes requises. Votre offre devient visible en quelques instants." },
+      step2: { title: "Recevez", desc: "Des profils certifiés répondent instantanément. Triez selon l'aptitude, le parcours H&R ou l'adresse." },
+      step3: { title: "Évaluez", desc: "Suivi graphique, commentaires, programmation de rendez-vous — pilotez l'intégralité via votre espace dédié." },
+      step4: { title: "Embauchez", desc: "Transmettez la proposition au profil choisi et contrôlez le retour en direct. Aucun désistement." }
     },
     features: {
       badge: "Fonctionnalités",
