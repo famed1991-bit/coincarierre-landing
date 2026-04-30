@@ -21,8 +21,8 @@ export default function App() {
         <Process />
         <Features />
         <VideoSection />
-        <Stats />
         <Testimonials />
+        <Stats />
         <FinalCTA />
       </main>
       <Footer />
