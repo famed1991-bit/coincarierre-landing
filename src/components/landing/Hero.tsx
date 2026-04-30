@@ -50,7 +50,7 @@ export function Hero() {
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-blue-pale mb-5 md:mb-8 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
+            className="text-blue-pale mb-3 md:mb-4 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
             {t('hero.subtitle').split('\n').map((line, i) => (
               <span key={i} className="text-[clamp(12px,3vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left">
@@ -61,19 +61,19 @@ export function Hero() {
           
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex justify-center gap-3 md:gap-4 mt-2 md:mt-4 bg-white/10 border border-white/15 rounded-lg py-1.5 md:py-2 px-3 md:px-4 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
+            className="flex justify-center gap-2 md:gap-3 mt-0 bg-white/10 border border-white/15 rounded-lg py-1 md:py-1.5 px-2.5 md:px-3 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
           >
-            <div className="min-w-[50px]">
-              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">457+</span>
-              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
+            <div className="min-w-[45px]">
+              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">457+</span>
+              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
             </div>
-            <div className="min-w-[50px]">
-              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">4 942+</span>
-              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
+            <div className="min-w-[45px]">
+              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">4 942+</span>
+              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
             </div>
-            <div className="min-w-[50px]">
-              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">48h</span>
-              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
+            <div className="min-w-[45px]">
+              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">48h</span>
+              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
             </div>
           </motion.div>
         </div>
