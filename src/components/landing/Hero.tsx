@@ -41,7 +41,7 @@ export function Hero() {
             <span className="text-[clamp(20px,4.5vw,48px)] md:whitespace-nowrap">
               {t('hero.title1')} {t('hero.title2')}
             </span>
-            <span className="text-[clamp(24px,5vw,48px)] text-lime md:whitespace-nowrap mt-1">
+            <span className="text-[clamp(36px,8vw,80px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase">
               {t('hero.title3')}
             </span>
           </motion.h1>
