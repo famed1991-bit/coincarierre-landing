@@ -39,7 +39,10 @@ export function Hero() {
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
           >
             <span className="text-[clamp(20px,4.5vw,48px)] md:whitespace-nowrap">
-              {t('hero.title1')} {t('hero.title2')}
+              {t('hero.title1')}
+            </span>
+            <span className="text-[clamp(20px,4.5vw,48px)] md:whitespace-nowrap">
+              {t('hero.title2')}
             </span>
             <span className="text-[clamp(36px,8vw,80px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase">
               {t('hero.title3')}
