@@ -68,8 +68,7 @@ export const translations = {
       t3: { quote: "« Le meilleur investissement RH de l'année. On a réduit notre taux de no-show à zéro. »", name: "Youssef El Mansouri", role: "DRH — Hôtel Casablanca" }
     },
     cta: {
-      title1: "Votre prochain recrutement",
-      title2: "commence ici",
+      title: "Votre prochain recrutement commence ici",
       subtitle: "Créez votre espace recruteur et publiez votre première annonce en moins de 5 minutes.",
       btn: "Publier votre annonce maintenant"
     },
@@ -152,8 +151,7 @@ export const translations = {
       t3: { quote: "« أفضل استثمار في الموارد البشرية هذا العام. لقد خفضنا معدل عدم الحضور إلى الصفر. »", name: "يوسف المنصوري", role: "مدير الموارد البشرية — فندق الدار البيضاء" }
     },
     cta: {
-      title1: "توظيفك القادم",
-      title2: "يبدأ هنا",
+      title: "توظيفك القادم يبدأ هنا",
       subtitle: "قم بإنشاء مساحة التوظيف الخاصة بك وانشر إعلانك الأول في أقل من 5 دقائق.",
       btn: "انشر إعلانك الآن"
     },
@@ -236,8 +234,7 @@ export const translations = {
       t3: { quote: "\"The best HR investment of the year. We reduced our no-show rate to zero.\"", name: "Youssef El Mansouri", role: "HR Director — Hotel Casablanca" }
     },
     cta: {
-      title1: "Your next hire",
-      title2: "starts here",
+      title: "Your next hire starts here",
       subtitle: "Create your recruiter workspace and post your first ad in less than 5 minutes.",
       btn: "Post your job now"
     },

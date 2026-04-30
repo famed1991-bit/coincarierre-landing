@@ -20,14 +20,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-semibold px-5 py-2.5 rounded-full mb-6 tracking-wide backdrop-blur-md"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-semibold px-5 py-2.5 rounded-full mb-4 md:mb-6 tracking-wide backdrop-blur-md"
           >
             <Hotel className="w-4 h-4" />
             {t('hero.badge')}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-bold text-white leading-tight tracking-tight mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
+            className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
           >
             <span className="text-[clamp(20px,4.5vw,48px)] whitespace-nowrap">
               {t('hero.title1')} {t('hero.title2')}
@@ -38,7 +38,7 @@ export function Hero() {
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-blue-pale mb-8 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
+            className="text-blue-pale mb-5 md:mb-8 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
             {t('hero.subtitle').split('\n').map((line, i) => (
               <span key={i} className="text-[clamp(12px,3vw,18px)] md:text-[clamp(16px,1.5vw,18px)] whitespace-nowrap leading-relaxed">
@@ -60,13 +60,13 @@ export function Hero() {
           </motion.div>
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xs text-white/60 mb-8"
+            className="text-xs text-white/60 mb-4 md:mb-8"
           >
             {t('hero.no_card')}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap gap-6 mt-8 bg-white/10 border border-white/15 rounded-2xl py-4 px-6 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
+            className="flex flex-wrap justify-center gap-6 mt-4 md:mt-8 bg-white/10 border border-white/15 rounded-2xl py-3 md:py-4 px-6 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
           >
             <div>
               <span className="block text-3xl font-extrabold text-lime">457+</span>

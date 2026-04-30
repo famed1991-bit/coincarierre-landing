@@ -11,10 +11,10 @@ export function Process() {
   ];
 
   return (
-    <section className="bg-white py-16 px-6">
+    <section className="bg-[#082a41] py-16 px-6">
       <div className="max-w-[960px] mx-auto text-center">
-        <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-[#082a41] leading-tight mb-3">{t('process.title')}</h2>
-        <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 max-w-[480px] mx-auto leading-relaxed">{t('process.subtitle')}</p>
+        <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-white leading-tight mb-3">{t('process.title')}</h2>
+        <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-300 max-w-[480px] mx-auto leading-relaxed">{t('process.subtitle')}</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-0 gap-y-8 mt-12 relative">
           <div className="hidden md:block absolute top-[48px] left-[12.5%] right-[12.5%] h-0.5 bg-blue-light z-0"></div>
@@ -27,8 +27,8 @@ export function Process() {
               <div className="w-24 h-24 bg-white border border-gray-100 flex items-center justify-center mx-auto mb-4 p-1 shadow-sm rounded-full group-hover:-translate-y-1 group-hover:shadow-md transition-all overflow-hidden">
                 <img src={step.icon} alt={step.title} referrerPolicy="no-referrer" className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-[clamp(24px,3vw,28px)] font-medium text-gray-900 mb-2">{step.title}</h3>
-              <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 leading-relaxed">{step.desc}</p>
+              <h3 className="text-[clamp(24px,3vw,28px)] font-medium text-white mb-2">{step.title}</h3>
+              <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-300 leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
         </div>

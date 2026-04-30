@@ -3,21 +3,16 @@ import { useLanguage } from "../../lib/i18n/LanguageContext";
 export function LogosMarquee() {
   const { t, dir } = useLanguage();
   const logos = [
-    { name: "Budget", src: "/logos/budget.jpg" },
-    { name: "Briqueterie JBEL ANNOUR", src: "/logos/jbel-annour.png" },
-    { name: "Callmepower", src: "/logos/callmepower.png" },
-    { name: "Colorado", src: "/logos/colorado.jpg" },
-    { name: "Crit", src: "/logos/crit.png" },
-    { name: "PEDINI", src: "/logos/pedini.jpg" },
-    { name: "EDVANTIS", src: "/logos/edvantis.png" },
-    { name: "EURO INFORMATION", src: "/logos/euro-information.png" },
-    { name: "GPI", src: "/logos/gpi.jpg" },
-    { name: "goFLUENT", src: "/logos/gofluent.png" },
-    { name: "Green Neo Call", src: "/logos/green-neo-call.png" },
-    { name: "Human Connect", src: "/logos/human-connect.png" },
-    { name: "Perfect Telemarketing", src: "/logos/perfect-telemarketing.jpg" },
-    { name: "MD CallCenter", src: "/logos/md-callcenter.png" },
-    { name: "HMS Connect", src: "/logos/hms-connect.png" },
+    { name: "La Mamounia Marrakech", src: "/logos/la_mamounia.png" },
+    { name: "Hotel Ben Batouta", src: "/logos/hotel_ben_batouta.png" },
+    { name: "Anna Hotel Agadir", src: "/logos/anna_hotel_agadir.png" },
+    { name: "Hotel Miranda", src: "/logos/hotel_miranda.png" },
+    { name: "Hotel de Casablanca", src: "/logos/hotel_de_casablanca.png" },
+    { name: "Marrakech Resort", src: "/logos/marrakech_resort.png" },
+    { name: "Kech Boutique Hotel", src: "/logos/kech_boutique_hotel.png" },
+    { name: "Marajah Spa", src: "/logos/marajah_spa.png" },
+    { name: "Marrakech Ryads Parc", src: "/logos/marrakech_ryads_parc.png" },
+    { name: "Dominium Hivernage Hotel", src: "/logos/dominium_hotel.png" },
   ];
   return (
     <section className="bg-white border-b border-gray-100 py-6">
