@@ -28,7 +28,7 @@ export const translations = {
       step1: { title: "Publiez", desc: "Détaillez la mission temporaire et les aptitudes requises. Votre offre devient visible en quelques instants." },
       step2: { title: "Recevez", desc: "Des profils certifiés répondent instantanément. Triez selon l'aptitude, le parcours H&R ou l'adresse." },
       step3: { title: "Évaluez", desc: "Suivi graphique, commentaires, programmation de rendez-vous — pilotez l'intégralité via votre espace dédié." },
-      step4: { title: "Embauchez", desc: "Envoyez l'offre au candidat retenu et suivez précisément la réponse en temps réel. Zéro no-show." }
+      step4: { title: "Embauchez", desc: "Envoyez l'offre au candidat retenu et suivez précisément la réponse donnée en temps réel. Zéro aucun no-show." }
     },
     features: {
       badge: "Fonctionnalités",
