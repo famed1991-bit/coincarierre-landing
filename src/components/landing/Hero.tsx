@@ -78,18 +78,18 @@ export function Hero() {
         <div className="py-4 md:py-8 flex flex-col justify-end items-center md:items-end h-full mt-4 md:mt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col items-center md:items-end gap-2 w-full sm:w-auto"
+            className="flex flex-col items-center gap-2 w-full sm:w-auto"
           >
             <a
               href="https://coincarriere.com/register?type=company"
-              className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center"
+              className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center text-center"
             >
               <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
               {t('hero.cta')}
             </a>
             <motion.p
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xs text-white/80 mt-2 text-center md:text-right"
+              className="text-xs text-white/80 mt-2 text-center"
             >
               {t('hero.no_card')}
             </motion.p>
