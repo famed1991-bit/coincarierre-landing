@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @theme {
   --color-blue-dark: #003d5c;
   --color-blue-main: #0077b6;
