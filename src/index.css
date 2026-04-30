@@ -35,8 +35,8 @@
   
   --color-primary: #0077b6;
   
-  --font-sans: "Montserrat", system-ui, sans-serif;
-  --font-heading: "Hero", "Montserrat", system-ui, sans-serif;
+  --font-sans: "Hero", system-ui, sans-serif;
+  --font-heading: "Montserrat", system-ui, sans-serif;
 }
 
 @layer base {
