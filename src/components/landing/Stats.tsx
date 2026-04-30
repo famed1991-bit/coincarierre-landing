@@ -48,7 +48,7 @@ export function Stats() {
                 <Tooltip cursor={{ fill: '#f9fafb' }} contentStyle={{ borderRadius: '10px', fontSize: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
                 <Legend iconType="square" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
                 <Bar dataKey={t('stats.chart_cc')} fill="#0077B6" radius={[6, 6, 0, 0]} />
-                <Bar dataKey={t('stats.chart_classic')} fill="#d1d5db" radius={[6, 6, 0, 0]} />
+                <Bar dataKey={t('stats.chart_classic')} fill="#177ac2" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
