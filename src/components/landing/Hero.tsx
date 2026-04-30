@@ -69,15 +69,15 @@ export function Hero() {
             className="flex flex-wrap justify-center gap-3 md:gap-6 mt-4 md:mt-8 bg-white/10 border border-white/15 rounded-2xl py-3 md:py-4 px-3 md:px-6 backdrop-blur-md w-full sm:w-fit mx-auto md:mx-0 text-center md:text-left"
           >
             <div className="flex-1 min-w-[80px]">
-              <span className="block text-2xl md:text-3xl font-extrabold text-lime">457+</span>
+              <span className="block text-xl md:text-2xl font-extrabold text-lime whitespace-nowrap">457+</span>
               <span className="block text-xs md:text-sm text-blue-pale/80 mt-1">{t('hero.stats.companies')}</span>
             </div>
             <div className="flex-1 min-w-[80px]">
-              <span className="block text-2xl md:text-3xl font-extrabold text-lime">4 942+</span>
+              <span className="block text-xl md:text-2xl font-extrabold text-lime whitespace-nowrap">4 942+</span>
               <span className="block text-xs md:text-sm text-blue-pale/80 mt-1">{t('hero.stats.offers')}</span>
             </div>
             <div className="flex-1 min-w-[80px]">
-              <span className="block text-2xl md:text-3xl font-extrabold text-lime">48h</span>
+              <span className="block text-xl md:text-2xl font-extrabold text-lime whitespace-nowrap">48h</span>
               <span className="block text-xs md:text-sm text-blue-pale/80 mt-1">{t('hero.stats.time')}</span>
             </div>
           </motion.div>
