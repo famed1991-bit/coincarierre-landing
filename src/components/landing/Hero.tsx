@@ -14,13 +14,22 @@ export function Hero() {
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-dark/90 via-blue-dark/70 to-blue-dark/30 md:from-blue-dark/85 md:via-blue-mid/55 md:to-blue-main/20"></div>
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-dark/70 via-transparent to-transparent"></div>
       <div className={`absolute -top-32 ${dir === 'rtl' ? '-left-32' : '-right-32'} w-[500px] h-[500px] rounded-full bg-blue-light/10 blur-[100px] pointer-events-none z-10`}></div>
-      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-0">
-        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start">
+      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-8 md:gap-0">
+        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 md:mb-10 flex justify-center md:justify-start"
+          >
+            <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-10 md:h-14 object-contain" />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-semibold px-5 py-2.5 rounded-full mb-4 md:mb-6 tracking-wide backdrop-blur-md"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-semibold px-5 py-2.5 rounded-full mb-4 md:mb-6 tracking-wide backdrop-blur-md w-fit mx-auto md:mx-0"
           >
             <Hotel className="w-4 h-4" />
             {t('hero.badge')}
@@ -46,27 +55,10 @@ export function Hero() {
               </span>
             ))}
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col md:flex-row items-center gap-3 mb-3 justify-center md:justify-start w-full"
-          >
-            <a
-              href="https://coincarriere.com/register?type=company"
-              className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full sm:w-auto justify-center"
-            >
-              <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
-              {t('hero.cta')}
-            </a>
-          </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xs text-white/60 mb-4 md:mb-8"
-          >
-            {t('hero.no_card')}
-          </motion.p>
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex justify-center gap-4 md:gap-6 mt-4 md:mt-8 bg-white/10 border border-white/15 rounded-xl py-2.5 md:py-3 px-4 md:px-5 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
+            className="flex justify-center gap-4 md:gap-6 mt-2 md:mt-4 bg-white/10 border border-white/15 rounded-xl py-2.5 md:py-3 px-4 md:px-5 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
           >
             <div className="min-w-[70px]">
               <span className="block text-lg md:text-xl font-extrabold text-lime whitespace-nowrap">457+</span>
@@ -82,7 +74,27 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-        <div className="hidden md:block" aria-hidden="true" />
+        
+        <div className="py-4 md:py-8 flex flex-col justify-end items-center md:items-end h-full mt-4 md:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col items-center md:items-end gap-2 w-full sm:w-auto"
+          >
+            <a
+              href="https://coincarriere.com/register?type=company"
+              className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center"
+            >
+              <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
+              {t('hero.cta')}
+            </a>
+            <motion.p
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-xs text-white/80 mt-2 text-center md:text-right"
+            >
+              {t('hero.no_card')}
+            </motion.p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
