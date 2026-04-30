@@ -58,19 +58,19 @@ export function Hero() {
           
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex justify-center gap-4 md:gap-6 mt-2 md:mt-4 bg-white/10 border border-white/15 rounded-xl py-2.5 md:py-3 px-4 md:px-5 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
+            className="flex justify-center gap-3 md:gap-4 mt-2 md:mt-4 bg-white/10 border border-white/15 rounded-lg py-1.5 md:py-2 px-3 md:px-4 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
           >
-            <div className="min-w-[70px]">
-              <span className="block text-lg md:text-xl font-extrabold text-lime whitespace-nowrap">457+</span>
-              <span className="block text-[11px] md:text-xs text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
+            <div className="min-w-[50px]">
+              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">457+</span>
+              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
             </div>
-            <div className="min-w-[70px]">
-              <span className="block text-lg md:text-xl font-extrabold text-lime whitespace-nowrap">4 942+</span>
-              <span className="block text-[11px] md:text-xs text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
+            <div className="min-w-[50px]">
+              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">4 942+</span>
+              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
             </div>
-            <div className="min-w-[70px]">
-              <span className="block text-lg md:text-xl font-extrabold text-lime whitespace-nowrap">48h</span>
-              <span className="block text-[11px] md:text-xs text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
+            <div className="min-w-[50px]">
+              <span className="block text-base md:text-lg font-extrabold text-lime whitespace-nowrap">48h</span>
+              <span className="block text-[10px] md:text-[11px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
             </div>
           </motion.div>
         </div>
