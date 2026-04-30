@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Plus } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 
 export function VideoSection() {
@@ -44,6 +45,16 @@ export function VideoSection() {
           >
             Your browser does not support the video tag.
           </video>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://coincarriere.com/register?type=company"
+            className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-8 md:px-12 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group"
+          >
+            <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
+            {t('hero.cta')}
+          </a>
         </div>
       </div>
     </section>

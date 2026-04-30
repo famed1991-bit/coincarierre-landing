@@ -9,8 +9,6 @@ import { Testimonials } from "./components/landing/Testimonials";
 import { FinalCTA } from "./components/landing/FinalCTA";
 import { Footer } from "./components/landing/Footer";
 
-import { FloatingCTA } from "./components/landing/FloatingCTA";
-
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -28,7 +26,6 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
-      <FloatingCTA />
     </div>
   );
 }
