@@ -14,11 +14,15 @@
   
   --color-primary: #0077b6;
   
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-heading: "Hero", "Montserrat", system-ui, sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-white text-gray-900 antialiased font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
