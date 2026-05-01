@@ -33,7 +33,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="bg-blue-bg px-6 pb-16">
+    <section className="bg-blue-bg px-6 pt-16 pb-16">
       <div className="max-w-[1100px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testi, idx) => (
