@@ -37,7 +37,7 @@ export function Testimonials() {
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[clamp(28px,4vw,34px)] font-bold text-[#082a41] leading-tight">
-            {t('testi.title') || 'Ce que disent nos clients'}
+            Que disent nos clients
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
