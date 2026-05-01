@@ -42,8 +42,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-8 md:gap-0 pb-8">
-        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
+      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-2 md:gap-0 pb-8">
+        <div className="pt-4 pb-0 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
@@ -88,7 +88,7 @@ export function Hero() {
           </motion.div>
         </div>
         
-        <div className="py-4 md:py-8 flex flex-col justify-end items-center md:items-end h-full mt-4 md:mt-0">
+        <div className="pt-2 pb-4 md:py-8 flex flex-col justify-end items-center md:items-end h-full mt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col items-center gap-2 w-full sm:w-auto"
