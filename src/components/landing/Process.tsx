@@ -24,8 +24,8 @@ export function Process() {
               initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay: step.id*0.1}}
               className="text-center px-4 relative z-10 group"
             >
-              <div className="w-24 h-24 bg-white border border-gray-100 flex items-center justify-center mx-auto mb-4 p-1 shadow-sm rounded-full group-hover:-translate-y-1 group-hover:shadow-md transition-all overflow-hidden">
-                <img src={step.icon} alt={step.title} referrerPolicy="no-referrer" className="w-full h-full object-contain" />
+              <div className="w-24 h-24 bg-white border border-gray-100 flex items-center justify-center mx-auto mb-4 shadow-sm rounded-full group-hover:-translate-y-2 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img src={step.icon} alt={step.title} referrerPolicy="no-referrer" className="w-full h-full object-cover scale-[1.15]" />
               </div>
               <h3 className="text-[clamp(24px,3vw,28px)] font-medium text-white mb-2">{step.title}</h3>
               <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-300 leading-relaxed">{step.desc}</p>
