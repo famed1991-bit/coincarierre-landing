@@ -22,7 +22,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="flex-shrink-0 relative z-20"
         >
-          <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-12 md:h-16 lg:h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]" />
+          <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-12 md:h-16 lg:h-20 object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] drop-shadow-[0_0_25px_rgba(255,255,255,0.6)]" />
         </motion.div>
 
         {/* Badge */}
