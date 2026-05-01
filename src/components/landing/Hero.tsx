@@ -45,13 +45,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
           >
-            <span className="text-[clamp(20px,4.5vw,48px)] md:whitespace-nowrap">
+            <span className="text-[clamp(28px,7vw,48px)] md:whitespace-nowrap">
               {t('hero.title1')}
             </span>
-            <span className="text-[clamp(20px,4.5vw,48px)] md:whitespace-nowrap">
+            <span className="text-[clamp(28px,7vw,48px)] md:whitespace-nowrap">
               {t('hero.title2')}
             </span>
-            <span className="text-[clamp(36px,8vw,80px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase">
+            <span className="text-[clamp(44px,10vw,80px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase">
               {t('hero.title3')}
             </span>
           </motion.h1>
@@ -60,7 +60,7 @@ export function Hero() {
             className="text-blue-pale mb-3 md:mb-4 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
             {t('hero.subtitle').split('\n').map((line, i) => (
-              <span key={i} className="text-[clamp(12px,3vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left">
+              <span key={i} className="text-[clamp(15px,4.5vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left mt-1 md:mt-0">
                 {line}
               </span>
             ))}
