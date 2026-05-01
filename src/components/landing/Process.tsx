@@ -4,10 +4,10 @@ import { useLanguage } from "../../lib/i18n/LanguageContext";
 export function Process() {
   const { t, dir } = useLanguage();
   const steps = [
-    { id: 1, icon: "/icons/publiez.png", title: t('process.step1.title'), desc: t('process.step1.desc') },
-    { id: 2, icon: "/icons/recevez.png", title: t('process.step2.title'), desc: t('process.step2.desc') },
-    { id: 3, icon: "/icons/evaluez.png", title: t('process.step3.title'), desc: t('process.step3.desc') },
-    { id: 4, icon: "/icons/embauchez.png", title: t('process.step4.title'), desc: t('process.step4.desc') },
+    { id: 1, icon: "/icons/Publiez.png", title: t('process.step1.title'), desc: t('process.step1.desc') },
+    { id: 2, icon: "/icons/Recevez.png", title: t('process.step2.title'), desc: t('process.step2.desc') },
+    { id: 3, icon: "/icons/Évaluez.png", title: t('process.step3.title'), desc: t('process.step3.desc') },
+    { id: 4, icon: "/icons/Embauchez.png", title: t('process.step4.title'), desc: t('process.step4.desc') },
   ];
 
   return (
