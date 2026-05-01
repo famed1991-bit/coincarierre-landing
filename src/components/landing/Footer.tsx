@@ -4,7 +4,7 @@ export function Footer() {
   const { t } = useLanguage();
   return (
     <footer className="bg-white border-t border-gray-100 py-7 px-6 text-center">
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-start mb-6">
         <img src="/logo.png" alt="CoinCarrière Logo" className="h-10 md:h-12 w-auto object-contain" />
       </div>
       <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mb-2">

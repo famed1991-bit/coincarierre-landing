@@ -42,8 +42,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-2 md:gap-0 pb-8">
-        <div className="pt-4 pb-0 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
+      <div className="max-w-[1100px] w-full mx-auto px-6 flex flex-col justify-center flex-1 relative z-20 pb-8 pt-4 md:pt-12">
+        
+        {/* Title and Subtitle Area */}
+        <div className="w-full md:w-1/2 md:pe-12 text-center md:text-start flex flex-col">
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
@@ -60,7 +62,7 @@ export function Hero() {
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-blue-pale mb-3 md:mb-4 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
+            className="text-blue-pale font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
             {t('hero.subtitle').split('\n').map((line, i) => (
               <span key={i} className="text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left mt-1 md:mt-0">
@@ -68,46 +70,52 @@ export function Hero() {
               </span>
             ))}
           </motion.div>
+        </div>
+
+        {/* Stats and CTA Area */}
+        <div className="w-full flex flex-col md:flex-row items-center mt-8 md:mt-6 gap-8 md:gap-0">
+          <div className="w-full md:w-1/2 md:pe-12 flex justify-center md:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex justify-center gap-2 md:gap-3 bg-white/10 border border-white/15 rounded-lg py-1 md:py-1.5 px-2.5 md:px-3 backdrop-blur-md w-fit text-left"
+            >
+              <div className="min-w-[45px]">
+                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">457+</span>
+                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
+              </div>
+              <div className="min-w-[45px]">
+                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">4 942+</span>
+                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
+              </div>
+              <div className="min-w-[45px]">
+                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">48h</span>
+                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
+              </div>
+            </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex justify-center gap-2 md:gap-3 mt-0 bg-white/10 border border-white/15 rounded-lg py-1 md:py-1.5 px-2.5 md:px-3 backdrop-blur-md w-fit mx-auto md:mx-0 text-left"
-          >
-            <div className="min-w-[45px]">
-              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">457+</span>
-              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
-            </div>
-            <div className="min-w-[45px]">
-              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">4 942+</span>
-              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
-            </div>
-            <div className="min-w-[45px]">
-              <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">48h</span>
-              <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
-            </div>
-          </motion.div>
-        </div>
-        
-        <div className="pt-2 pb-4 md:py-8 flex flex-col justify-end items-center md:items-end h-full mt-0">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col items-center gap-2 w-full sm:w-auto"
-          >
-            <a
-              href="https://coincarriere.com/register?type=company"
-              className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center text-center"
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-end">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col items-center gap-2 w-full sm:w-auto"
             >
-              <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
-              {t('hero.cta')}
-            </a>
-            <motion.p
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xs text-white/80 mt-2 text-center"
-            >
-              {t('hero.no_card')}
-            </motion.p>
-          </motion.div>
+              <a
+                href="https://coincarriere.com/register?type=company"
+                className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center text-center"
+              >
+                <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
+                {t('hero.cta')}
+              </a>
+              <motion.p
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-xs text-white/80 mt-2 text-center"
+              >
+                {t('hero.no_card')}
+              </motion.p>
+            </motion.div>
+          </div>
         </div>
+
       </div>
     </section>
   );
