@@ -63,7 +63,7 @@ export function Hero() {
             className="text-blue-pale mb-3 md:mb-4 font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
           >
             {t('hero.subtitle').split('\n').map((line, i) => (
-              <span key={i} className="text-[clamp(16px,5vw,20px)] md:text-[clamp(18px,1.5vw,20px)] md:whitespace-nowrap leading-relaxed text-center md:text-left mt-1 md:mt-0">
+              <span key={i} className="text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left mt-1 md:mt-0">
                 {line}
               </span>
             ))}
