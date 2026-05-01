@@ -20,9 +20,12 @@ export function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex-shrink-0 relative z-20"
+          className="flex-shrink-0 relative z-20 flex items-center justify-center"
         >
-          <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-12 md:h-16 lg:h-20 object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] drop-shadow-[0_0_25px_rgba(255,255,255,0.6)]" />
+          {/* White glow effect */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[160%] bg-white/40 blur-[30px] rounded-[100%] -z-10 pointer-events-none"></div>
+          
+          <img src="/logo-hero.png" alt="CoinCarrière Logo" className="relative h-12 md:h-16 lg:h-20 object-contain drop-shadow-sm" />
         </motion.div>
 
         {/* Badge */}
