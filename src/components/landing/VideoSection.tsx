@@ -41,6 +41,8 @@ export function VideoSection() {
             ref={videoRef}
             className="w-full h-full object-cover"
             controls
+            preload="none"
+            poster="/hero.jpg"
             src="/promo.mp4"
           >
             Your browser does not support the video tag.
