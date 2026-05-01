@@ -14,26 +14,31 @@ export function Hero() {
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-dark/90 via-blue-dark/70 to-blue-dark/30 md:from-blue-dark/85 md:via-blue-mid/55 md:to-blue-main/20"></div>
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-dark/70 via-transparent to-transparent"></div>
       <div className={`absolute -top-32 ${dir === 'rtl' ? '-left-32' : '-right-32'} w-[500px] h-[500px] rounded-full bg-blue-light/10 blur-[100px] pointer-events-none z-10`}></div>
-      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-8 md:gap-0">
-        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8 md:mb-10 flex justify-center md:justify-start"
-          >
-            <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-10 md:h-14 object-contain" />
-          </motion.div>
+      <div className="max-w-[1100px] w-full mx-auto px-6 pt-6 md:pt-8 relative z-20 flex items-start md:items-center justify-between">
+        {/* Logo */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex-shrink-0"
+        >
+          <img src="/logo-hero.png" alt="CoinCarrière Logo" className="h-12 md:h-20 object-contain" />
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-sm font-semibold px-5 py-2.5 rounded-full mb-4 md:mb-6 tracking-wide backdrop-blur-md w-fit mx-auto md:mx-0"
-          >
-            <Hotel className="w-4 h-4" />
-            {t('hero.badge')}
-          </motion.div>
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute left-1/2 transform -translate-x-1/2 top-6 md:top-8 inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-xs md:text-sm font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-full tracking-wide backdrop-blur-md whitespace-nowrap"
+        >
+          <Hotel className="w-3.5 h-3.5 md:w-4 md:h-4" />
+          {t('hero.badge')}
+        </motion.div>
+      </div>
+
+      <div className="max-w-[1100px] w-full mx-auto px-6 grid md:grid-cols-2 items-center flex-1 relative z-20 gap-8 md:gap-0 pb-8">
+        <div className="py-4 md:py-8 md:pe-12 text-center md:text-start flex flex-col h-full justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
