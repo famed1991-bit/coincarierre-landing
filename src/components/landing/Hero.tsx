@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-dark/90 via-blue-dark/70 to-blue-dark/30 md:from-blue-dark/85 md:via-blue-mid/55 md:to-blue-main/20"></div>
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-dark/70 via-transparent to-transparent"></div>
       <div className={`absolute -top-32 ${dir === 'rtl' ? '-left-32' : '-right-32'} w-[500px] h-[500px] rounded-full bg-blue-light/10 blur-[100px] pointer-events-none z-10`}></div>
-      <div className="max-w-[1100px] w-full mx-auto px-6 pt-6 md:pt-8 relative z-20 flex items-center justify-between">
+      <div className="max-w-[1100px] w-full mx-auto px-6 pt-6 md:pt-8 relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -26,7 +26,7 @@ export function Hero() {
         </motion.div>
 
         {/* Badge */}
-        <div className="absolute inset-x-0 flex justify-center pointer-events-none">
+        <div className="relative md:absolute inset-x-0 flex justify-center pointer-events-none w-full">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
