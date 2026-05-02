@@ -60,16 +60,12 @@ export function Hero() {
               {t('hero.title3')}
             </span>
           </motion.h1>
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-blue-pale font-normal drop-shadow-sm flex flex-col items-center md:items-start w-full"
+            className="text-blue-pale font-normal drop-shadow-sm text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] leading-relaxed text-center md:text-left mt-4 md:mt-6 w-full max-w-[600px]"
           >
-            {t('hero.subtitle').split('\n').map((line, i) => (
-              <span key={i} className="text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] md:whitespace-nowrap leading-relaxed text-center md:text-left mt-1 md:mt-0">
-                {line}
-              </span>
-            ))}
-          </motion.div>
+            {t('hero.subtitle')}
+          </motion.p>
         </div>
 
         {/* Stats and CTA Area */}
