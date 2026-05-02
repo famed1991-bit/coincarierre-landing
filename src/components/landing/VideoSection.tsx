@@ -55,7 +55,6 @@ export function VideoSection() {
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
             onEnded={() => setIsPlaying(false)}
-            onClick={togglePlay}
             preload="none"
             poster="/hero.jpg"
             src="/promo.mp4"
