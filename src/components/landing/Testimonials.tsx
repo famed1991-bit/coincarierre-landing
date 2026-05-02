@@ -36,7 +36,7 @@ export function Testimonials() {
       name: t('testi.t4.name'),
       role: t('testi.t4.role'),
       initials: "RF",
-      image: "",
+      image: "/testimonials/t4.jpg",
       rating: 5
     },
     {
