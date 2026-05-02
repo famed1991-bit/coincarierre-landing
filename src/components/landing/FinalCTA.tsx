@@ -20,16 +20,9 @@ export function FinalCTA() {
         </p>
         <a
           href="https://coincarriere.com/register?type=company"
-          onClick={(e) => {
-            e.preventDefault();
-            const targetUrl = e.currentTarget.href;
-            if (typeof window !== 'undefined' && (window as any).fbq) {
-              (window as any).fbq('track', 'Lead');
-            }
-            setTimeout(() => {
-              window.location.href = targetUrl;
-            }, 300);
-          }}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => typeof window !== 'undefined' && (window as any).fbq?.('track', 'Lead')}
           className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-8 py-3.5 rounded-xl text-base font-bold transition-all hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(180,220,2,0.3)] hover:shadow-[0_8px_28px_rgba(180,220,2,0.4)] group"
         >
           <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
