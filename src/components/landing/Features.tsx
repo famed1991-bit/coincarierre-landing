@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 
 export function Features() {
   const { t } = useLanguage();
@@ -50,93 +50,73 @@ export function Features() {
     },
   ];
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const checkScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
-    }
-  };
-
-  useEffect(() => {
-    checkScroll();
-    window.addEventListener('resize', checkScroll);
-    return () => window.removeEventListener('resize', checkScroll);
-  }, []);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.clientWidth;
-      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
-    }
-  };
+  const nextSlide = () => setCurrentIndex((prev) => (prev === features.length - 1 ? 0 : prev + 1));
+  const prevSlide = () => setCurrentIndex((prev) => (prev === 0 ? features.length - 1 : prev - 1));
 
   return (
     <section className="bg-blue-bg py-16 px-6">
       <div className="max-w-[1200px] mx-auto relative">
-        <div className="text-center md:max-w-[70%] mx-auto mb-4">
+        <div className="text-center md:max-w-[70%] mx-auto mb-8 md:mb-12">
           <h2 className="text-[clamp(30px,4vw,36px)] font-bold text-[#082a41] leading-tight mb-3">{t('features.title')}</h2>
           <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 leading-relaxed">{t('features.subtitle')}</p>
         </div>
 
-        {/* Carousel Container Wrapper */}
-        <div className="relative mt-8 md:mt-12 w-full mx-auto px-0 md:px-16 group/carousel">
+        {/* Centered Single-Card Carousel */}
+        <div className="relative w-full max-w-[600px] mx-auto px-8 md:px-0">
+          
           {/* Left Arrow */}
           <button 
-            onClick={() => scroll('left')} 
-            disabled={!canScrollLeft}
-            className={`absolute left-2 md:left-0 top-[45%] -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]'}`}
+            onClick={prevSlide}
+            className="absolute left-0 md:-left-20 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6 text-[#082a41]" />
+            <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 text-[#082a41]" />
           </button>
 
-          {/* Carousel Track */}
-          <div 
-            ref={scrollRef}
-            onScroll={checkScroll}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 pt-4 px-4 md:px-4"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {features.map((f, i) => (
-              <motion.div
-                key={i}
-                initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay: i*0.1}}
-                className="bg-white rounded-[24px] p-8 border border-blue-light/40 hover:border-[#082a41]/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center w-[280px] md:w-[320px] snap-center shrink-0"
-              >
-                <div className="shrink-0 flex items-center justify-center mb-6">
-                  {f.icon}
-                </div>
-                <div>
-                  <h3 className="text-[20px] md:text-[22px] font-bold text-[#082a41] mb-3">{f.title}</h3>
-                  <p className="text-[15px] md:text-[16px] font-normal text-gray-500 leading-relaxed">{f.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Active Card */}
+          <div className="overflow-visible pb-8 pt-4">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-gradient-to-b from-white to-[#f4f9fd] rounded-[32px] p-8 md:p-14 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-blue-light/50 flex flex-col items-center text-center w-full mx-auto"
+            >
+              <div className="shrink-0 flex items-center justify-center mb-8 w-28 h-28 bg-white rounded-[24px] shadow-sm border border-blue-light/30">
+                {features[currentIndex].icon}
+              </div>
+              <div>
+                <h3 className="text-[24px] md:text-[28px] font-bold text-[#082a41] mb-4">{features[currentIndex].title}</h3>
+                <p className="text-[16px] md:text-[18px] font-normal text-gray-600 leading-relaxed max-w-[400px] mx-auto">{features[currentIndex].desc}</p>
+              </div>
+            </motion.div>
           </div>
 
           {/* Right Arrow */}
           <button 
-            onClick={() => scroll('right')} 
-            disabled={!canScrollRight}
-            className={`absolute right-2 md:right-0 top-[45%] -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]'}`}
+            onClick={nextSlide}
+            className="absolute right-0 md:-right-20 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6 text-[#082a41]" />
+            <ChevronRight className="w-6 h-6 md:w-7 md:h-7 text-[#082a41]" />
           </button>
+          
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-2 mb-4">
+            {features.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${currentIndex === idx ? 'bg-[#082a41] w-8' : 'bg-[#082a41]/20 w-2.5 hover:bg-[#082a41]/40'}`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
         </div>
       </div>
-      
-      {/* Hide scrollbar for webkit */}
-      <style>{`
-        .overflow-x-auto::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }
