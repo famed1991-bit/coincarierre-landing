@@ -48,16 +48,19 @@ export function Hero() {
         <div className="w-full md:w-1/2 md:pe-12 text-center md:text-start flex flex-col">
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 drop-shadow-md flex flex-col items-center md:items-start w-full"
+            className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 flex flex-col items-center md:items-start w-full"
           >
-            <span className="text-[clamp(32px,8vw,56px)] md:whitespace-nowrap">
+            <span className="text-[clamp(20px,4.5vw,32px)] md:whitespace-nowrap text-white/90 drop-shadow mb-1">
               {t('hero.title1')}
             </span>
-            <span className="text-[clamp(32px,8vw,56px)] md:whitespace-nowrap">
+            <span className="text-[clamp(26px,6vw,46px)] md:whitespace-nowrap drop-shadow-md">
               {t('hero.title2')}
             </span>
-            <span className="text-[clamp(48px,12vw,96px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase">
+            <span className="text-[clamp(26px,6vw,46px)] md:whitespace-nowrap drop-shadow-md">
               {t('hero.title3')}
+            </span>
+            <span className="text-[clamp(36px,10vw,72px)] font-black text-lime md:whitespace-nowrap mt-1 leading-none uppercase drop-shadow-lg">
+              {t('hero.title4')}
             </span>
           </motion.h1>
           <motion.p
