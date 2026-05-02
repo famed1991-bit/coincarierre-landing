@@ -6,8 +6,8 @@ export const translations = {
     hero: {
       badge: "Hôtellerie & Restauration — Maroc",
       title1: "Hôtellerie & Restauration :",
-      title2: "No-Show terminés.",
-      title3: "Recrutez mieux,",
+      title2: "No-Show terminés. Recrutez mieux",
+      title3: "et plus vite.",
       subtitle: "Publiez votre offre, recevez des candidats vérifiés\net gérez tout votre recrutement H&R sur une seule plateforme.\nEn ligne en 3 minutes.",
       cta: "Publier votre annonce maintenant",
       no_card: "Gratuit pour commencer · Aucune carte bancaire",
@@ -91,8 +91,8 @@ export const translations = {
     hero: {
       badge: "الفندقة والمطاعم — المغرب",
       title1: "الفندقة والمطاعم :",
-      title2: "وداعاً لعدم الحضور.",
-      title3: "وظّف أفضل،",
+      title2: "وداعاً لعدم الحضور. وظّف أفضل",
+      title3: "وبشكل أسرع.",
       subtitle: "انشر عرضك، واحصل على مرشحين موثوقين،\nوأدر عملية التوظيف في قطاع الفندقة والمطاعم عبر منصة واحدة.\nمتصل في 3 دقائق.",
       cta: "انشر إعلانك الآن",
       no_card: "مجاني للبدء · لا يتطلب بطاقة ائتمان",
@@ -176,8 +176,8 @@ export const translations = {
     hero: {
       badge: "Hospitality & Catering — Morocco",
       title1: "Hospitality & Catering:",
-      title2: "No more No-Shows.",
-      title3: "Hire better,",
+      title2: "No more No-Shows. Hire better",
+      title3: "and faster.",
       subtitle: "Post your job, receive verified candidates,\nand manage all your H&R recruitment on a single platform.\nOnline in 3 minutes.",
       cta: "Post your job now",
       no_card: "Free to start · No credit card required",
