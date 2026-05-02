@@ -77,54 +77,57 @@ export function Features() {
 
   return (
     <section className="bg-blue-bg py-16 px-6">
-      <div className="max-w-[1024px] mx-auto relative">
-        <div className="text-center md:text-left md:max-w-[70%]">
-          <h2 className="text-[clamp(30px,4vw,36px)] font-semibold text-[#082a41] leading-tight mb-3">{t('features.title')}</h2>
+      <div className="max-w-[1200px] mx-auto relative">
+        <div className="text-center md:max-w-[70%] mx-auto mb-4">
+          <h2 className="text-[clamp(30px,4vw,36px)] font-bold text-[#082a41] leading-tight mb-3">{t('features.title')}</h2>
           <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 leading-relaxed">{t('features.subtitle')}</p>
         </div>
 
-        {/* Carousel controls */}
-        <div className="flex justify-center md:justify-end gap-4 mt-8 md:-mt-14 mb-8">
+        {/* Carousel Container Wrapper */}
+        <div className="relative mt-8 md:mt-12 w-full mx-auto px-0 md:px-16 group/carousel">
+          {/* Left Arrow */}
           <button 
             onClick={() => scroll('left')} 
             disabled={!canScrollLeft}
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-blue-light/30 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 hover:shadow-[0_4px_15px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all"
+            className={`absolute left-2 md:left-0 top-[45%] -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 ${!canScrollLeft ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]'}`}
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6 text-[#082a41]" />
           </button>
+
+          {/* Carousel Track */}
+          <div 
+            ref={scrollRef}
+            onScroll={checkScroll}
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 pt-4 px-4 md:px-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {features.map((f, i) => (
+              <motion.div
+                key={i}
+                initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay: i*0.1}}
+                className="bg-white rounded-[24px] p-8 border border-blue-light/40 hover:border-[#082a41]/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center w-[280px] md:w-[320px] snap-center shrink-0"
+              >
+                <div className="shrink-0 flex items-center justify-center mb-6">
+                  {f.icon}
+                </div>
+                <div>
+                  <h3 className="text-[20px] md:text-[22px] font-bold text-[#082a41] mb-3">{f.title}</h3>
+                  <p className="text-[15px] md:text-[16px] font-normal text-gray-500 leading-relaxed">{f.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
           <button 
             onClick={() => scroll('right')} 
             disabled={!canScrollRight}
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-blue-light/30 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-50 hover:shadow-[0_4px_15px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all"
+            className={`absolute right-2 md:right-0 top-[45%] -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-100 transition-all duration-300 ${!canScrollRight ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110 hover:shadow-[0_4px_25px_rgba(0,0,0,0.15)]'}`}
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6 text-[#082a41]" />
           </button>
-        </div>
-
-        {/* Carousel Container */}
-        <div 
-          ref={scrollRef}
-          onScroll={checkScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {features.map((f, i) => (
-            <motion.div
-              key={i}
-              initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay: i*0.1}}
-              className="bg-white rounded-2xl p-6 border border-blue-light/40 hover:border-blue-light hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 text-center sm:text-left min-w-[280px] w-full md:min-w-[calc(50%-12px)] snap-center md:snap-start shrink-0"
-            >
-              <div className="shrink-0 flex items-center justify-center">
-                {f.icon}
-              </div>
-              <div className="flex-1 mt-2 sm:mt-0">
-                <h3 className="text-[clamp(24px,3vw,28px)] font-medium text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-[clamp(16px,2vw,18px)] font-normal text-gray-500 leading-relaxed max-w-sm mx-auto sm:mx-0">{f.desc}</p>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </div>
       
