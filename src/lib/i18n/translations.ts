@@ -65,7 +65,9 @@ export const translations = {
     testi: {
       t1: { quote: "« Avant CoinCarrière, je passais 2 jours à trier des CV. Maintenant j'ai une liste de 5 candidats fiables en quelques heures. Le no-show a disparu de mon vocabulaire. »", name: "Karim Alaoui", role: "Directeur RH — Riad Marrakech" },
       t2: { quote: "« 8 serveurs recrutés pour la saison estivale en 3 jours. Les profils étaient vérifiés, aucune mauvaise surprise à l'arrivée. »", name: "Sara Bennani", role: "Gérante — Restaurant Agadir" },
-      t3: { quote: "« Le meilleur investissement RH de l'année. On a réduit notre taux de no-show à zéro. »", name: "Youssef El Mansouri", role: "DRH — Hôtel Casablanca" }
+      t3: { quote: "« Le meilleur investissement RH de l'année. On a réduit notre taux de no-show à zéro. »", name: "Youssef El Mansouri", role: "DRH — Hôtel Casablanca" },
+      t4: { quote: "« Grâce à CoinCarrière, nous trouvons des commis de cuisine compétents en un temps record. La rapidité est impressionnante. »", name: "Rachid El Fassi", role: "Chef Cuisinier" },
+      t5: { quote: "« L'équipe de notre Riad est enfin stable. CoinCarrière nous a permis de recruter du personnel fiable sur le long terme. »", name: "Omar Benjelloun", role: "Directeur de Riad" }
     },
     cta: {
       title: "Votre prochain recrutement commence ici",
@@ -148,7 +150,9 @@ export const translations = {
     testi: {
       t1: { quote: "« قبل كوان كاريير، كنت أقضي يومين في فرز السير الذاتية. الآن لدي قائمة بـ 5 مرشحين موثوقين في غضون ساعات قليلة. التغيب المفاجئ اختفى من قاموسي. »", name: "كريم العلوي", role: "مدير الموارد البشرية — رياض مراكش" },
       t2: { quote: "« 8 نوادل تم توظيفهم لموسم الصيف في 3 أيام. كانت الملفات موثوقة، ولم تكن هناك مفاجآت سيئة عند وصولهم. »", name: "سارة بناني", role: "مديرة — مطعم أكادير" },
-      t3: { quote: "« أفضل استثمار في الموارد البشرية هذا العام. لقد خفضنا معدل عدم الحضور إلى الصفر. »", name: "يوسف المنصوري", role: "مدير الموارد البشرية — فندق الدار البيضاء" }
+      t3: { quote: "« أفضل استثمار في الموارد البشرية هذا العام. لقد خفضنا معدل عدم الحضور إلى الصفر. »", name: "يوسف المنصوري", role: "مدير الموارد البشرية — فندق الدار البيضاء" },
+      t4: { quote: "« بفضل كوان كاريير، أصبحنا نجد مساعدي طباخين ذوي كفاءة في وقت قياسي. السرعة مبهرة. »", name: "رشيد الفاسي", role: "رئيس طهاة" },
+      t5: { quote: "« فريق الرياض أصبح أخيراً مستقراً. كوان كاريير ساعدنا في تكوين فريق عمل موثوق ومستقر. »", name: "عمر بنجلون", role: "مدير رياض" }
     },
     cta: {
       title: "توظيفك القادم يبدأ هنا",
@@ -231,7 +235,9 @@ export const translations = {
     testi: {
       t1: { quote: "\"Before CoinCarrière, I spent 2 days sorting CVs. Now I get a shortlist of 5 reliable candidates in a few hours. 'No-show' has disappeared from my vocabulary.\"", name: "Karim Alaoui", role: "HR Director — Riad Marrakech" },
       t2: { quote: "\"8 waiters hired for the summer season in 3 days. The profiles were verified, no bad surprises when they arrived.\"", name: "Sara Bennani", role: "Manager — Restaurant Agadir" },
-      t3: { quote: "\"The best HR investment of the year. We reduced our no-show rate to zero.\"", name: "Youssef El Mansouri", role: "HR Director — Hotel Casablanca" }
+      t3: { quote: "\"The best HR investment of the year. We reduced our no-show rate to zero.\"", name: "Youssef El Mansouri", role: "HR Director — Hotel Casablanca" },
+      t4: { quote: "\"Thanks to CoinCarrière, we find competent assistant cooks in record time. The speed is impressive.\"", name: "Rachid El Fassi", role: "Head Chef" },
+      t5: { quote: "\"Our Riad's team is finally stable. CoinCarrière helped us build a reliable team for the long term.\"", name: "Omar Benjelloun", role: "Riad Manager" }
     },
     cta: {
       title: "Your next hire starts here",

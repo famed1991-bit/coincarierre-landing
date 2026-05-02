@@ -29,6 +29,22 @@ export function Testimonials() {
       initials: "YM",
       image: "/testimonials/t3.jpg",
       rating: 4.2
+    },
+    {
+      quote: t('testi.t4.quote'),
+      name: t('testi.t4.name'),
+      role: t('testi.t4.role'),
+      initials: "RF",
+      image: "",
+      rating: 5
+    },
+    {
+      quote: t('testi.t5.quote'),
+      name: t('testi.t5.name'),
+      role: t('testi.t5.role'),
+      initials: "OB",
+      image: "",
+      rating: 4.8
     }
   ];
 
