@@ -6,9 +6,9 @@ export const translations = {
     hero: {
       badge: "Hôtellerie & Restauration — Maroc",
       title1: "Hôtellerie & Restauration :",
-      title2: "No-Show terminés.",
+      title2: "No-Show terminés",
       title3: "Recrutez mieux",
-      title4: "PLUS VITE.",
+      title4: "PLUS VITE",
       subtitle1: "Publiez votre offre, recevez des candidats vérifiés et gérez tout votre recrutement H&R sur une seule plateforme.",
       subtitle2: "En ligne en 3 minutes.",
       cta: "Publier votre annonce maintenant",
