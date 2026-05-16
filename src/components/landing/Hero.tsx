@@ -50,7 +50,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
             className="font-bold text-white leading-tight tracking-tight mb-3 md:mb-5 flex flex-col items-center md:items-start w-full"
           >
-            <span className="text-[clamp(20px,4.5vw,32px)] md:whitespace-nowrap text-white/90 drop-shadow mb-1">
+            <span className="text-[clamp(26px,6vw,46px)] md:whitespace-nowrap drop-shadow-md">
               {t('hero.title1')}
             </span>
             <span className="text-[clamp(26px,6vw,46px)] md:whitespace-nowrap drop-shadow-md">
@@ -65,35 +65,36 @@ export function Hero() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-blue-pale font-normal drop-shadow-sm text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] leading-relaxed text-center md:text-left mt-4 md:mt-6 w-full max-w-[600px]"
+            className="text-white/90 font-normal drop-shadow-sm text-[clamp(14px,4vw,18px)] md:text-[clamp(16px,1.5vw,18px)] leading-relaxed text-center md:text-left mt-4 md:mt-6 w-full max-w-[600px]"
           >
-            {t('hero.subtitle')}
+            <span>{t('hero.subtitle1')}</span>
+            <span className="ml-1">{t('hero.subtitle2')}</span>
           </motion.p>
         </div>
 
         {/* Stats and CTA Area */}
-        <div className="w-full flex flex-col md:flex-row items-center mt-8 md:mt-6 gap-8 md:gap-0">
-          <div className="w-full md:w-1/2 md:pe-12 flex justify-center md:justify-start">
+        <div className="w-full flex flex-col md:flex-row items-center mt-8 md:mt-6 gap-6 md:justify-between">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex justify-center gap-2 md:gap-3 bg-white/10 border border-white/15 rounded-lg py-1 md:py-1.5 px-2.5 md:px-3 backdrop-blur-md w-fit text-left"
+              className="flex flex-row items-center gap-6 md:gap-8 bg-blue-dark/60 border border-white/20 backdrop-blur-md rounded-2xl px-6 py-4 w-fit text-left"
             >
-              <div className="min-w-[45px]">
-                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">457+</span>
-                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.companies')}</span>
+              <div className="flex flex-col items-start">
+                <span className="block text-base md:text-lg font-bold text-lime whitespace-nowrap leading-none">457+</span>
+                <span className="block text-[10px] md:text-xs text-white/80 mt-1 tracking-wide">{t('hero.stats.companies')}</span>
               </div>
-              <div className="min-w-[45px]">
-                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">4 942+</span>
-                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.offers')}</span>
+              <div className="flex flex-col items-start">
+                <span className="block text-base md:text-lg font-bold text-lime whitespace-nowrap leading-none">4 942+</span>
+                <span className="block text-[10px] md:text-xs text-white/80 mt-1 tracking-wide">{t('hero.stats.offers')}</span>
               </div>
-              <div className="min-w-[45px]">
-                <span className="block text-sm md:text-base font-extrabold text-lime whitespace-nowrap">48h</span>
-                <span className="block text-[9px] md:text-[10px] text-blue-pale/80 mt-0.5">{t('hero.stats.time')}</span>
+              <div className="flex flex-col items-start">
+                <span className="block text-base md:text-lg font-bold text-lime whitespace-nowrap leading-none">48h</span>
+                <span className="block text-[10px] md:text-xs text-white/80 mt-1 tracking-wide">{t('hero.stats.time')}</span>
               </div>
             </motion.div>
           </div>
           
-          <div className="w-full md:w-1/2 flex flex-col items-center md:items-end">
+          <div className="w-full md:w-auto flex flex-col items-center md:items-end justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col items-center gap-2 w-full sm:w-auto"
@@ -103,17 +104,12 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => typeof window !== 'undefined' && (window as any).fbq?.('track', 'Lead')}
-                className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-2xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center text-center"
+                className="inline-flex items-center gap-2.5 bg-lime hover:bg-lime-hover text-lime-dark px-6 md:px-10 py-3.5 md:py-4 rounded-xl text-[16px] md:text-lg font-bold transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group w-full justify-center text-center"
               >
                 <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
                 {t('hero.cta')}
               </a>
-              <motion.p
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-xs text-white/80 mt-2 text-center"
-              >
-                {t('hero.no_card')}
-              </motion.p>
+              {/* Hidden on desktop since image doesn't show it, but kept on mobile or just commented out */}
             </motion.div>
           </div>
         </div>

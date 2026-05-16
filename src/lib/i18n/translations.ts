@@ -5,9 +5,10 @@ export const translations = {
     },
     hero: {
       badge: "Hôtellerie & Restauration — Maroc",
-      title2: "Finis les no-shows",
+      title1: "Hôtellerie & Restauration :",
+      title2: "No-Show terminés.",
       title3: "Recrutez mieux",
-      title4: "plus vite",
+      title4: "PLUS VITE.",
       subtitle1: "Publiez votre offre, recevez des candidats vérifiés et gérez tout votre recrutement H&R sur une seule plateforme.",
       subtitle2: "En ligne en 3 minutes.",
       cta: "Publier votre annonce maintenant",
@@ -91,6 +92,7 @@ export const translations = {
     },
     hero: {
       badge: "الفندقة والمطاعم — المغرب",
+      title1: "الفندقة والمطاعم :",
       title2: "وداعاً لعدم الحضور",
       title3: "وظّف أفضل",
       title4: "أسرع",
@@ -177,6 +179,7 @@ export const translations = {
     },
     hero: {
       badge: "Hospitality & Catering — Morocco",
+      title1: "Hospitality & Catering :",
       title2: "No more No-Shows",
       title3: "Hire better",
       title4: "faster",
