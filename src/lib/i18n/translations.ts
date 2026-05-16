@@ -4,7 +4,7 @@ export const translations = {
       lang: "FR"
     },
     hero: {
-      badge: "Hôtellerie & Restauration",
+      badge: "Hôtellerie & Restauration — Maroc",
       title2: "Finis les no-shows",
       title3: "Recrutez mieux",
       title4: "plus vite",
@@ -90,7 +90,7 @@ export const translations = {
       lang: "AR"
     },
     hero: {
-      badge: "الفندقة والمطاعم",
+      badge: "الفندقة والمطاعم — المغرب",
       title2: "وداعاً لعدم الحضور",
       title3: "وظّف أفضل",
       title4: "أسرع",
@@ -176,7 +176,7 @@ export const translations = {
       lang: "EN"
     },
     hero: {
-      badge: "Hospitality & Catering",
+      badge: "Hospitality & Catering — Morocco",
       title2: "No more No-Shows",
       title3: "Hire better",
       title4: "faster",
