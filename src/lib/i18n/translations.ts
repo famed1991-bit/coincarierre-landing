@@ -5,11 +5,11 @@ export const translations = {
     },
     hero: {
       badge: "Hôtellerie & Restauration — Maroc",
-      title1: "Hôtellerie & Restauration :",
-      title2: "No-Show terminés.",
+      title2: "Finis les no-shows",
       title3: "Recrutez mieux",
-      title4: "plus vite.",
-      subtitle: "Publiez votre offre, recevez des candidats vérifiés et gérez tout votre recrutement H&R sur une seule plateforme. En ligne en 3 minutes.",
+      title4: "plus vite",
+      subtitle1: "Publiez votre offre, recevez des candidats vérifiés et gérez tout votre recrutement H&R sur une seule plateforme.",
+      subtitle2: "En ligne en 3 minutes.",
       cta: "Publier votre annonce maintenant",
       no_card: "Gratuit pour commencer · Aucune carte bancaire",
       stats: {
@@ -91,11 +91,11 @@ export const translations = {
     },
     hero: {
       badge: "الفندقة والمطاعم — المغرب",
-      title1: "الفندقة والمطاعم :",
-      title2: "وداعاً لعدم الحضور.",
+      title2: "وداعاً لعدم الحضور",
       title3: "وظّف أفضل",
-      title4: "أسرع.",
-      subtitle: "انشر عرضك، واحصل على مرشحين موثوقين، وأدر عملية التوظيف في قطاع الفندقة والمطاعم عبر منصة واحدة. متصل في 3 دقائق.",
+      title4: "أسرع",
+      subtitle1: "انشر عرضك، واحصل على مرشحين موثوقين، وأدر عملية التوظيف في قطاع الفندقة والمطاعم عبر منصة واحدة.",
+      subtitle2: "متصل في 3 دقائق.",
       cta: "انشر إعلانك الآن",
       no_card: "مجاني للبدء · لا يتطلب بطاقة ائتمان",
       stats: {
@@ -177,11 +177,11 @@ export const translations = {
     },
     hero: {
       badge: "Hospitality & Catering — Morocco",
-      title1: "Hospitality & Catering:",
-      title2: "No more No-Shows.",
+      title2: "No more No-Shows",
       title3: "Hire better",
-      title4: "faster.",
-      subtitle: "Post your job, receive verified candidates, and manage all your H&R recruitment on a single platform. Online in 3 minutes.",
+      title4: "faster",
+      subtitle1: "Post your job, receive verified candidates, and manage all your H&R recruitment on a single platform.",
+      subtitle2: "Online in 3 minutes.",
       cta: "Post your job now",
       no_card: "Free to start · No credit card required",
       stats: {
